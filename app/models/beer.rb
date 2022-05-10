@@ -12,6 +12,10 @@ class Beer < ApplicationRecord
 		unless ['ipa', 'brown_ale', 'pilsner', 'lager', 'lambic', 'hefeweizen'].include?(beer_type.downcase)
 			errors.add(:beer_type, "Can't be created/Already Present")
 		end
+
+		unless ['ipa', 'brown_ale', 'pilsner', 'lager', 'lambic', 'hefeweizen'].include?(beer_type.upcase)
+			errors.add(:beer_type, "Can't be created/Already Present")
+		end
 	end
 
 	def to_param
