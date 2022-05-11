@@ -1,0 +1,16 @@
+<div id="<%= dom_id @beer %>">
+  <p>
+    <strong>Beer type:</strong>
+    <%= @beer.beer_type %>
+  </p>
+
+  <p>
+    <strong>Stock:</strong>
+    <%= @beer.stock %>
+  </p>
+
+  <p>
+    <%= render "beertype" %>
+  </p>
+ 
+</div>

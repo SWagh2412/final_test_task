@@ -1,0 +1,10 @@
+<%= form_for("beer_path", method: "patch") do |form| %>
+  <div>
+    <%= form.label :stock_update, style: "display: block" %>
+    <%= form.number_field :stock %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
